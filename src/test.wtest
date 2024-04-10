@@ -1,0 +1,71 @@
+import bolichito.*
+import objetos.*
+import personas.*
+
+test "el bolichito es brillante" {
+	
+	vidriera.poner(placa)
+	mostrador.poner(placa)
+	assert.that(bolichito.esBrillante())
+}
+
+test "el bolichito es monocromatico" {
+	
+	vidriera.poner(remera)
+	mostrador.poner(remera)
+	assert.that(bolichito.esMonocromatico())
+}
+
+test "el bolichito esta desequilibrado" {
+	
+	vidriera.poner(remera)
+	mostrador.poner(biblioteca)
+	assert.that(bolichito.estaDesequilibrado())
+}
+
+test "el bolichito tiene algo de color rojo" {
+	
+	vidriera.poner(remera)
+	mostrador.poner(biblioteca)
+	assert.that(bolichito.tieneAlgoDeColor(rojo))
+}
+
+test "el bolichito puede mejorar" {
+	
+	vidriera.poner(remera)
+	mostrador.poner(remera)
+	assert.that(bolichito.puedeMejorar())
+}
+
+test "el bolichito puede ofrecerle algo a estefania" {
+	
+	vidriera.poner(remera)
+	mostrador.poner(pelota)
+	assert.that(bolichito.puedeOfrecerleAlgoA(estefania))
+}
+
+test "se puede poner un objeto en la vidriera" {
+	
+	vidriera.poner(remera)
+	assert.that(vidriera.objeto() == remera)
+}
+
+test "se puede poner un objeto en el mostrador" {
+	
+	mostrador.poner(remera)
+	assert.that(mostrador.objeto() == remera)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
