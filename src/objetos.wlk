@@ -28,7 +28,7 @@ object biblioteca{
 
 object muneco{
 	
-	var pesoActual = 0  // varía
+	var pesoActual //se debe colocar
 	
 	method peso() = pesoActual
 	
@@ -39,12 +39,16 @@ object muneco{
 	method cambiarPeso(nuevoPeso){
 		pesoActual = nuevoPeso
 	}
+	
+	method setPeso(peso){
+		pesoActual = peso
+	}
 }
 
 object placa{
 
-	var pesoActual = 0 // varía
-	var colorActual = rojo // varía
+	var pesoActual //se debe colocar
+	var colorActual //se debe colocar
 	
 	method peso() = pesoActual
 	
@@ -59,6 +63,23 @@ object placa{
 	method cambiarColor(nuevoColor){
 		colorActual = nuevoColor
 	}
+	
+	method setPeso(peso){
+		pesoActual = peso
+	}
+	
+	method setColor(color){
+		colorActual = color
+	}
+}
+
+object arito{
+	
+	method peso() = 180
+	
+	method material() = cobre
+	
+	method color() = celeste
 }
 
 object rojo{
